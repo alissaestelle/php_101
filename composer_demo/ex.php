@@ -1,9 +1,5 @@
 <?php 
 
-// require 'src/Person.php';
-// require 'src/Business.php';
-// require 'src/Staff.php';
-
 use Demo\Business;
 use Demo\Users\Person;
 use Demo\Staff;
