@@ -1,17 +1,16 @@
 <?php
 
-interface Animal {
-    // Interfaces are used for concrete implementation.
-    function communicate();
-}
+// interface Animal {
+//     function communicate();
+// }
 
 interface Logger {
     function execute($content);
 }
 
-interface JSONable {
-    function convertToJSON();
-}
+// interface JSONable {
+//     function convertToJSON();
+// }
 
 class FileLog implements Logger {
     function execute($content)
