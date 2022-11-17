@@ -4,13 +4,13 @@
 //     function communicate();
 // }
 
-interface Logger {
-    function execute($content);
-}
-
 // interface JSONable {
 //     function convertToJSON();
 // }
+
+interface Logger {
+    function execute($content);
+}
 
 class FileLog implements Logger {
     function execute($content)
