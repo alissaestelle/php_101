@@ -29,15 +29,16 @@ class DatabaseLog implements Logger {
 class User {
     // function __construct(protected LogToFile $logger) {}
     function __construct(public Logger $logger) {}
-    function display()
+    function display($name)
     {
-        $name = 'Alissa';
+        // $name = 'Alissa';
         $this->logger->execute($name);
     }
 }
 
 $record = new User(new FileLog);
+$record->display('Alissa');
 $record = new User(new DatabaseLog);
-$record->display();
+$record->display('Alissa');
 
 ?>

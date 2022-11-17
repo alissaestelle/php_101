@@ -1,28 +1,18 @@
 <?php
 
 class Cat {
-    protected $name;
-
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
+    function __construct(public $name){}
 }
 
 class Staff {
-    protected $cats = [];
-
-    public function __construct($cats = [])
-    {
-        $this->cats = $cats;
-    }
-
-    public function getCats()
+    function __construct(protected $cats = []){}
+    
+    function getCats()
     {
         return $this->cats;
     }
 
-    public function add(Cat $cat)
+    function add(Cat $cat)
     // Type Hinting Example: Prefixing the "Cat" class name to the $cat parameter indicates that the expected argument should be an instance of the Cat object.
     {
         $this->cats[] = $cat;
@@ -31,21 +21,17 @@ class Staff {
 
 
 class Cafe {
-    protected $name;
-    protected $staff;
+    function __construct(
+        protected $name, 
+        protected Staff $staff
+        ){}
 
-    public function __construct($name, Staff $staff)
-    {
-        $this->name = $name;
-        $this->staff = $staff;
-    }
-
-    public function getStaff()
+    function getStaff()
     {
         return $this->staff->getCats();
     }
 
-    public function hire(Cat $cat)
+    function hire(Cat $cat)
     {
         $this->staff->add($cat);
     }

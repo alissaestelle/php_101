@@ -19,6 +19,6 @@ class Unread implements Filterable {
 }
 
 var_dump($thisUser = (new Favorites)->filter());
-var_dump($thatUser = (new Unread)->filter());
+var_dump($thisUser = (new Unread)->filter());
 
 ?>

@@ -8,16 +8,12 @@ Ex: setExample()
 */
 
 class Person {
+    function __construct(
+        private $name,
+        private $age
+        ){}
 
-    private $name;
-    private $age;
-
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
-
-    public function setAge($age)
+    function setAge($age)
     // setAge(): setter example that limits the user age group to only those older than 18
     {
         if ($age < 18) {
@@ -28,7 +24,7 @@ class Person {
         }
     }
 
-    public function getAge() {
+    function getAge() {
         return $this->age * 365;
     }
 }
