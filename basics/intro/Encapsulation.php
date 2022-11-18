@@ -8,10 +8,8 @@ Ex: setExample()
 */
 
 class Person {
-    function __construct(
-        private $name,
-        private $age
-        ){}
+    protected $age;
+    function __construct(protected $name){}
 
     function setAge($age)
     // setAge(): setter example that limits the user age group to only those older than 18
