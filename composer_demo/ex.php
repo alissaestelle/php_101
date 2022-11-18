@@ -5,10 +5,10 @@ use Demo\Users\Person;
 use Demo\Staff;
 
 
-$dyel = new Demo\Users\Person('Dyel');
-$kimmelStaff = new Demo\Staff([$dyel]);
-$kimmel = new Demo\Business($kimmelStaff);
-$kimmel->hire($alissa = new Demo\Users\Person('Alissa'));
+$dyel = new Person('Dyel');
+$kimmelStaff = new Staff([$dyel]);
+$kimmel = new Business($kimmelStaff);
+$kimmel->hire($alissa = new Person('Alissa'));
 
 var_dump($kimmel->getStaff());
 
